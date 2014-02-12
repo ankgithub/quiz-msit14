@@ -50,6 +50,20 @@ return array(
                     ),
                 ),
             ),
+            'users' => array(
+            	'type' => 'Segment',
+            	'options' => array(
+            	   'route' => '/u[/:user][/:action]',
+            	   'constraints' => array(
+            	       'user' => '[a-zA-Z][a-zA-Z0-9_-]*',
+            	       'action' => '[a-zA-Z][a-zA-Z0-9_-]*'
+                    ),
+            	    'defaults' => array(
+                    	'controller' => 'Application\Controller\User',
+                    	'action' => 'index',
+                    ),   
+                ),
+            ),
         ),
     ),
     'service_manager' => array(
@@ -69,7 +83,8 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Application\Controller\Index' => 'Application\Controller\IndexController'
+            'Application\Controller\Index' => 'Application\Controller\IndexController',
+            'Application\Controller\User' => '\Application\Controller\UserController',
         ),
     ),
     'view_manager' => array(

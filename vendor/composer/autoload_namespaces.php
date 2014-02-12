@@ -6,6 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Zend\\' => $vendorDir . '/zendframework/zendframework/library/',
+    'Zend\\' => $vendorDir . '/ZF2/library/',
     'ZFTool\\' => $vendorDir . '/zendframework/zftool/src/',
 );
