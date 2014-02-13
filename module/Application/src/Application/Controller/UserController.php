@@ -2,7 +2,7 @@
 namespace Application\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
-use Zend\View\Helper\ViewModel;
+use Zend\View\Model\ViewModel;
 
 class UserController 
     extends AbstractActionController{
@@ -10,8 +10,7 @@ class UserController
     private $user;
     
     public function indexAction(){
-
-        return new ViewModel();
+	return new ViewModel();
     }
 }
 

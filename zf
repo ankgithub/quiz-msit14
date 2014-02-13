@@ -1,0 +1,2 @@
+php vendor/zendframework/zftool/zf.php $*
+#echo $*
